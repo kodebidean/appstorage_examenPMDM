@@ -1,12 +1,14 @@
 package com.kodeleku.appstorage_examen.ui.adapter
 
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import com.kodeleku.appstorage_examen.R
 import com.kodeleku.appstorage_examen.model.Article
+import com.kodeleku.appstorage_examen.ui.view.DetailActivity
 
 class ArticleAdapter(private val onClick: (Article) -> Unit) :
     ListAdapter<Article, ArticleViewHolder>(DIFF_CALLBACK) {
@@ -17,8 +19,14 @@ class ArticleAdapter(private val onClick: (Article) -> Unit) :
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        holder.bind(getItem(position), onClick)
+        val article = getItem(position)
+        holder.bind(article) {
+            val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+            intent.putExtra("ARTICLE", article)
+            holder.itemView.context.startActivity(intent)
+        }
     }
+
 
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Article>() {

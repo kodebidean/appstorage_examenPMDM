@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_electronics"
+            android:title="@string/electr_nica" />
+        <item
+            android:id="@+id/nav_jewelery"
+            android:title="@string/joyer_a" />
+        <item
+            android:id="@+id/nav_men_clothing"
+            android:title="@string/ropa_hombre" />
+        <item
+            android:id="@+id/nav_women_clothing"
+            android:title="@string/ropa_mujer" />
+    </group>
+</menu>

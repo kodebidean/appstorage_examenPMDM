@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">appstorage_examen</string>
+    <string name="electr_nica">Electrónica</string>
+    <string name="joyer_a">Joyería</string>
+    <string name="ropa_hombre">Ropa Hombre</string>
+    <string name="ropa_mujer">Ropa Mujer</string>
 </resources>

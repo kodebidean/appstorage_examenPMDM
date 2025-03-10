@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.devtools.ksp") // KSP (Para Room)
-    id("dagger.hilt.android.plugin") // Hilt
-    kotlin("kapt") // KAPT (Para Hilt)
+    id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
+    kotlin("kapt")
     id("kotlin-parcelize")
 }
 
@@ -50,8 +50,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    implementation (libs.androidx.core.core.ktx.v190.x10)
-    implementation (libs.androidx.appcompat.v151)
     implementation (libs.androidx.recyclerview)
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
@@ -62,6 +60,7 @@ dependencies {
     implementation (libs.hilt.android)
     kapt (libs.hilt.android.compiler)
     implementation (libs.picasso)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
